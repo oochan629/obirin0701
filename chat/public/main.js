@@ -47,8 +47,10 @@ socketio.on('signin',function(msgs){
 });
 
 function displayMessage(msg){
-  const li = document.createElement("li");
-  li.append(msg.name);
-  chats.append(li);
-  
+  const dt = document.createElement("dt");
+  const dd = document.createElement("dd");
+  dt.append(msg.name);
+  chats.append(dt);
+  dd.append(msg.msg);
+  chats.append(dd);
 }
